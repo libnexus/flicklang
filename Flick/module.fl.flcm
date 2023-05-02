@@ -1,0 +1,32 @@
+"<module.fl>.<f>.<d>" 1867750575 (x):
+    52, 5, 11 LOAD_NAME_FAST "x";
+    56, 5, 15 LOAD_NAME "y";
+    56, 5, 15 BINARY_ADD;
+    57, 5, 16 RETURN_X_VALUES 1;
+    60, 6, 3 LOAD_NONE;
+    60, 6, 3 RETURN_X_VALUES 1;
+
+
+"<module.fl>.<f>" 1706234378 (y):
+    21, 2, 11 LOAD_NAME_FAST "y";
+    26, 2, 16 LOAD_INT 10;
+    26, 2, 16 BINARY_MUL;
+    26, 2, 16 STORE_NAME "y";
+    60, 6, 3 CREATE_FUNCTION "d",  code @ 1867750575;
+    72, 8, 10 LOAD_NAME_FAST "d";
+    73, 8, 11 RETURN_X_VALUES 1;
+    75, 9, 2 LOAD_NONE;
+    75, 9, 2 RETURN_X_VALUES 1;
+
+
+"<module.fl>" 1721931908 ():
+    75, 9, 2 CREATE_FUNCTION "f",  code @ 1706234378;
+    84, 11, 8 LOAD_NAME_FAST "f";
+    87, 11, 11 LOAD_NAME_FAST "f";
+    89, 11, 13 LOAD_INT 8;
+    90, 11, 14 CALL 1;
+    92, 11, 16 LOAD_INT 7;
+    93, 11, 17 CALL 1;
+    94, 11, 18 PRINT_TOP_X 2;
+
+

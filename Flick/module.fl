@@ -1,0 +1,11 @@
+fun f(y) {
+	var y = y * 10;
+	
+	fun d(x) {
+		return x + y;
+	}
+	
+	return d;
+}
+
+print f, f(8)(7);
